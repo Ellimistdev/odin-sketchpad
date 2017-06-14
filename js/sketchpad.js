@@ -4,7 +4,7 @@
 var stylesheet = document.styleSheets[0];
 var input = document.getElementById('dimension');
 var count = parseInt(input.value,10);
-
+var $canvas = $('.canvas');
 $(document).ready(main());
 
 function main(){
@@ -13,16 +13,16 @@ function main(){
 }
 
 function listen(){
-    
-  $(document).mousedown(function() {
-    $('.square').bind('mouseenter', function(){
+  var $square = $('.square');
+  $canvas.mousedown(function() {
+    $square.bind('mouseenter', function(){
         $(this).addClass('highlight');
     });
   });
-  $(document).mouseup(function() {
-      $('.square').unbind('mouseenter');
+  $canvas.mouseup(function() {
+      $square.unbind('mouseenter');
   });
-  $('.square').on('click', function(){
+  $square.on('click', function(){
         $(this).addClass('highlight');
     });
     $('#dimension').on('keyup', function(){
@@ -51,12 +51,11 @@ function setDim(){
 }
 
 function generate(){
-    var $container = $('.container');
     setDimensions();
-    $container.empty();
+    $canvas.empty();
     for (var i = 0; i < count; i++){
-        $container.append('<tr class="row"></tr>'); //row ' + i + ' 
-        var child = $container.find('tr:last');
+        $canvas.append('<tr class="row"></tr>'); //row ' + i + ' 
+        var child = $canvas.find('tr:last');
         for (var j = 0; j < count; j++)
         {
             child.append('<td class="square squareDim"></td>');
