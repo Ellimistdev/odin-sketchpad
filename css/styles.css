@@ -1,9 +1,10 @@
 .canvas{
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
-    max-width: 962px;
+    max-width: 800px;
     table-layout: fixed;
     border-spacing: 0px;
     border-collapse: separate;
+    border-radius: 2px;
     /*prevent ghost image when dragging on canvas*/
     -ms-user-select: none;
     -webkit-user-select: none;

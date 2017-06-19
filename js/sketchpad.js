@@ -65,9 +65,9 @@ function generate(){
 }
 
 function setDimensions(){
-    var edge = 900/count + 'px';
+    var edge = 800/count + 'px';
     var selector = '.squareDim';
-    var propStr = 'width : ' + edge +'; height : ' + edge;
+    var propStr = 'padding-left : ' + edge +'; padding-bottom : ' + edge;
     
     if (stylesheet.cssRules[stylesheet.cssRules.length-1].selectorText===".squareDim"){
         stylesheet.deleteRule(stylesheet.cssRules.length-1);
