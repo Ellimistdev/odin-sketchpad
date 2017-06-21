@@ -4,11 +4,21 @@
         <meta charset="UTF-8">
         <title>Sketchpad</title>
         <link rel="stylesheet" href="css/styles.css" type="text/css">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons|Lobster|Quicksand|Roboto" rel="stylesheet">
     </head>
     <body>
-    <button class="generate" onclick="generate()">Generate</button> 
-    <input type="text" id="dimension" value="16"></input><span class="dimUpdate"></span>
+    <nav>
+    <div id="sideNav">
+        <ul>
+            <li><span class="center">Dimensions</span></li>
+            <li><span class="center"><input type="text" id="dimension" value="16" maxlength="3"></input><span class="dimUpdate"></span></span></li>
+            <li><button class="generate center" onclick="generate()">Generate</button></li>
+        </ul>
+        <span class="credit center"><span class="material-icons">code</span> by <a href="https://github.com/endotnick/odin-sketchpad">n.</a></span>
+    </div>
+    </nav>
     <div class="wrapper">
+        <button id="menuButton" class="material-icons" onclick="toggleNav()">menu</button>
         <table class="canvas"></table>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script> 

@@ -5,6 +5,9 @@ var stylesheet = document.styleSheets[0];
 var input = document.getElementById('dimension');
 var count = parseInt(input.value,10);
 var $canvas = $('.canvas');
+var sideNav = document.getElementById('sideNav');
+var menuButton = document.getElementById('menuButton');
+var $dimension = $('#dimension');
 $(document).ready(main());
 
 function main(){
@@ -25,7 +28,7 @@ function listen(){
   $square.on('click', function(){
         $(this).addClass('highlight');
     });
-    $('#dimension').on('keyup', function(){
+    $dimension.on('keyup', function(){
         setCount();
         setDim();
     });
@@ -34,8 +37,23 @@ function listen(){
         generate();
     });*/
 }
+function toggleNav(){
+    if (sideNav.style.width == "100px"){
+        sideNav.style.width = "0px";
+        menuButton.style.marginLeft ="0px";
+    }
+    else {
+        sideNav.style.width = "100px";
+        menuButton.style.marginLeft ="100px";
+        setTimeout(function() { 
+            //clear and reset val to force cursor to the end of the input following focus
+            $dimension.focus().val('').val(count); 
+        }, 300);
+        
+    }
+}
 
-/* Currently will not set the count to the limit on the initial page load if the value is one digit greater than the limit */
+// Currently will not set the count to the limit on the initial page load if the value is one digit greater than the limit 
 function setCount(){
     if (parseInt(count,10) > 150){
         count = 150;

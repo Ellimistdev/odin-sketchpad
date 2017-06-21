@@ -1,3 +1,91 @@
+/* global */
+html, body, ul, li, a{
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    
+}
+html, body{
+    font-weight: 100;
+    font-family: "Roboto", sans-serif;
+}
+a{
+    color: #ffb74d;    
+    text-decoration: none;
+}
+
+a:hover{
+    color: #ffff00;    
+}
+
+button:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+button {
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+}
+
+/* nav */
+#dimension{
+    width: 25px;
+    color: #fff;
+    background-color: rgba(0, 0, 0, 0);
+    border: 0;
+    border-bottom: 2px solid white;
+}
+
+#menuButton{
+    transition: 0.5s; 
+    z-index: 1; 
+    display:inline;
+}
+
+#sideNav{
+    color: #fff;
+    width: 0px;
+    position: fixed;
+    background: #b39ddb;
+    height:100%;
+    padding-top: 10px;
+    overflow:hidden;
+    transition: 0.5s; 
+    box-shadow:  -5px 0 5px 1px rgba(0, 0, 0, 0.1) inset;
+}
+#sideNav li{
+    padding-top: 5px;
+}
+
+#sideNav button{
+    margin-top:5px;
+}
+
+.center{
+    width: 100px;
+    margin: 0 auto;
+    text-align: center;
+    position: absolute;
+}
+
+.credit{
+    bottom: 20px;
+    font-family: "Lobster", sans-serif;
+}
+
+.credit span{
+    vertical-align: bottom;
+    font-size:19px;
+}
+.generate{
+    color: #fff;
+}
+
+/* body */
+.wrapper{
+    z-index: 1;
+}
+
 .canvas{
     box-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.2);
     max-width: 800px;
@@ -5,6 +93,7 @@
     border-spacing: 0px;
     border-collapse: separate;
     border-radius: 2px;
+    margin: 0 auto;
     /*prevent ghost image when dragging on canvas*/
     -ms-user-select: none;
     -webkit-user-select: none;
@@ -12,7 +101,6 @@
     -moz-user-select: none;
     -o-user-select: none;
     user-select: none;
-    margin: 0 auto;
 }
 
 .highlight{
