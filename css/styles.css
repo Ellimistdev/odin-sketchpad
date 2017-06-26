@@ -19,12 +19,16 @@ a:hover{
 }
 
 button:hover{
-    background-color: rgba(0, 0, 0, 0.1);
+    background-color: rgba(153, 153, 153, 0.3);
 }
 
 button {
     background-color: rgba(0, 0, 0, 0);
     border: none;
+    color: rgba(0, 0, 0, 0.87);
+    cursor: pointer;
+    height: 36px;
+    line-height: 36px;
 }
 
 /* nav */
@@ -48,17 +52,15 @@ button {
     position: fixed;
     background: #b39ddb;
     height:100%;
-    padding-top: 10px;
+    padding-top: 20px;
     overflow:hidden;
     transition: 0.5s; 
     box-shadow:  -5px 0 5px 1px rgba(0, 0, 0, 0.1) inset;
-}
-#sideNav li{
-    padding-top: 5px;
+    font-size: medium;
 }
 
-#sideNav button{
-    margin-top:5px;
+#sideNav li{
+    padding-top: 5px;
 }
 
 .center{
@@ -69,7 +71,7 @@ button {
 }
 
 .credit{
-    bottom: 20px;
+    bottom: 30px;
     font-family: "Lobster", sans-serif;
 }
 
@@ -79,6 +81,11 @@ button {
 }
 .generate{
     color: #fff;
+    transition: 0.5s; 
+}
+
+.generate:hover{
+    background-color: rgba(153, 153, 153, 0.6);
 }
 
 /* body */
